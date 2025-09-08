@@ -81,12 +81,13 @@ if __name__ == "__main__":
     """ Hyperparameters """
     batch_size = 16
     lr = 1e-4
-    num_epochs = 500
+    num_epochs = 20
     model_path = os.path.join("files", "model.h5")
     csv_path = os.path.join("files", "log.csv")
 
     """ Dataset """
-    dataset_path = "/media/nikhil/Seagate Backup Plus Drive/ML_DATASET/brain_tumor_dataset/data"
+    #dataset_path = "/media/nikhil/Seagate Backup Plus Drive/ML_DATASET/brain_tumor_dataset/data"
+    dataset_path = "/kaggle/input/brain-tumor-segmentation"
     (train_x, train_y), (valid_x, valid_y), (test_x, test_y) = load_dataset(dataset_path)
 
     print(f"Train: {len(train_x)} - {len(train_y)}")
